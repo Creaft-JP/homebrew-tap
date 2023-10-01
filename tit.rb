@@ -5,20 +5,20 @@
 class Tit < Formula
   desc "a Git-Like CLI creating tutrials"
   homepage ""
-  version "1.0.0-alpha"
+  version "1.0.0-alpha-1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Darwin_arm64.tar.gz"
-      sha256 "a97e7344061ec8172a63321e9e7333aad989754f2e355353a491e3d2c860786a"
+    if Hardware::CPU.intel?
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha-1/tit_Darwin_x86_64.tar.gz"
+      sha256 "fb699f922777b9196d9a77720cc7872f6d89d1c6eb05ab789a497bc90d46adb8"
 
       def install
         bin.install "tit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Darwin_x86_64.tar.gz"
-      sha256 "c5c14583fecfba39104a0490587938402a704b9fcac6a013e6e79197b6a62e59"
+    if Hardware::CPU.arm?
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha-1/tit_Darwin_arm64.tar.gz"
+      sha256 "bed982d04f045d8a9362464431a01828940480437e11a44a214aa56c17e3cdfe"
 
       def install
         bin.install "tit"
@@ -28,16 +28,16 @@ class Tit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Linux_arm64.tar.gz"
-      sha256 "33b2f9bf5a06a3a67b903be884244f5faa88a0e95991c738f56c481c1b2d30e8"
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha-1/tit_Linux_arm64.tar.gz"
+      sha256 "c59e11947e5842cde905f98a8ad7f230910ac7cf5fa6fe09d133a1d0ee6241f6"
 
       def install
         bin.install "tit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Linux_x86_64.tar.gz"
-      sha256 "e6db9800ea390e5e9b2e6dd3e73c104079ac85881b2325e3e76853572cb1fc86"
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha-1/tit_Linux_x86_64.tar.gz"
+      sha256 "b2beadad8d205da0bd3c002bd0f45a67fce1ee7368de39163e7f8a48f8e1a4fb"
 
       def install
         bin.install "tit"
