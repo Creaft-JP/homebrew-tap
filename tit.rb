@@ -5,20 +5,20 @@
 class Tit < Formula
   desc "a Git-Like CLI creating tutrials"
   homepage ""
-  version "0.3.0"
+  version "1.0.0-alpha"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Creaft-JP/tit/releases/download/v0.3.0/tit_Darwin_x86_64.tar.gz"
-      sha256 "51887727ca10171b0d0efdcd20e8ef10fe4b0d65391693129cc336a76b635a26"
+    if Hardware::CPU.arm?
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Darwin_arm64.tar.gz"
+      sha256 "a97e7344061ec8172a63321e9e7333aad989754f2e355353a491e3d2c860786a"
 
       def install
         bin.install "tit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Creaft-JP/tit/releases/download/v0.3.0/tit_Darwin_arm64.tar.gz"
-      sha256 "681559cef8930977c5debc834227dbae44758348c5c09d83eec68e4ee1bd0432"
+    if Hardware::CPU.intel?
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Darwin_x86_64.tar.gz"
+      sha256 "c5c14583fecfba39104a0490587938402a704b9fcac6a013e6e79197b6a62e59"
 
       def install
         bin.install "tit"
@@ -28,16 +28,16 @@ class Tit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Creaft-JP/tit/releases/download/v0.3.0/tit_Linux_arm64.tar.gz"
-      sha256 "6625edc0870e8403ce29622154d37a7847e539bdd697684ea9385e5de0f1edef"
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Linux_arm64.tar.gz"
+      sha256 "33b2f9bf5a06a3a67b903be884244f5faa88a0e95991c738f56c481c1b2d30e8"
 
       def install
         bin.install "tit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Creaft-JP/tit/releases/download/v0.3.0/tit_Linux_x86_64.tar.gz"
-      sha256 "7cf605ca6f0b87a75c86e4d3e34431e05e5eb9ee92e61632c1dade55340d2ae3"
+      url "https://github.com/Creaft-JP/tit/releases/download/v1.0.0-alpha/tit_Linux_x86_64.tar.gz"
+      sha256 "e6db9800ea390e5e9b2e6dd3e73c104079ac85881b2325e3e76853572cb1fc86"
 
       def install
         bin.install "tit"
